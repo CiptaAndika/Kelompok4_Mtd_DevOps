@@ -45,7 +45,8 @@
 
                 <p style="text-indent: 50px; text-align: justify;">SMP Pancasila terletak di wilayah Kecamatan Banguntapan, Kabupaten Bantul, Daerah Istimewa Yogyakarta. SMP Pancasila setiap melakukan penerimaan peserta didik baru selalu menerima banyak sekali siswa bahkan hampir satu daerah berminat ke sekolah ini. SMP Pancasila, saat ini adalah sekolah yang membuka kelas sebanyak 18 kelas, dan 800 siswa per tahun. Namun, pelayanan yang digunakan masih menggunakan pelayanan dengan  manual sehingga waktu yang digunakan lebih lama dan tidak efisien dan pendataan akan berpeluang terjadi kekeliruan.</p>
 
-                <p style="text-indent: 50px; text-align: justify;"> Berdasarkan permasalahan tersebut maka dibuatlah sistem informasi berbasis web yang digunakan untuk penerimaan siswa baru di SMP Pancasila dengan tujuan agar pendataan data dan penerimaan calon siswa baru lebih efektif dan efisien. Sehingga sedikit kemungkinan kekeliruan saat melakukan pendataan pada saat penerimaan peserta didik baru di setiap tahunya.</p>
+                <p style="text-indent: 50px; text-align: justify;"> Berdasarkan permasalahan tersebut maka dibuatlah sistem informasi berbasis web yang digunakan untuk penerimaan siswa baru di SMP Pancasila dengan tujuan agar pendataan data dan penerimaan calon siswa baru lebih efektif dan efisien. Sehingga sedikit kemungkinan kekeliruan saat melakukan pendataan pada saat penerimaan peserta didik baru di setiap tahunya.Sistem ini akan mengolah data calon siswa , data admin dan data transaksi dengan menggunakan MySQL. Sistem ini dibangun dengan menggunakan Bahasa pemrograman PHP, HTML, JavaScript, dan CSS.
+                </p>
                
 
                 <h3>1.2	Rumusan Masalah</h3>
@@ -196,37 +197,45 @@
 
                 <h2>BAB III</h2>
                 <h2> PEMBAHASAN</h2>
-                <h3>3.1	Perancangan Sistem</h3>
+                <h3>3.1	METODE PENELITIAN</h3>
+                <p style="text-indent: 50px;">Metode penelitian yang digunakan dalam penelitian ini adalah metode pengembangan DevOps yang memiliki proses seperti dibawah ini:</p>
+                <ol>
+                    <li>Plan <br> website ini dibuat dengan tujuan untuk memudahkan pendaftaran yang dulu masih menggunakan metode manual akan lebih efektif dan efisien ketika menggunakan sistem infomasi berupa websit</li>
+                    <li>Code <br> teks editor yang digunakan pada kasus ini menggunakan sumblime teks atau VSC (visual studio code).bahasa pemrograman yang kami gunakan dalam kasus ini adalah PHP, HTML, JavaScript, dan CSS.</li>
+                    <li>Build <br>Setelah tim developer selesai menulis kode yang dibutuhkan, mereka akan memasukan kode tersebut ke dalam shared code repository. </li>
+                    <li>Test <br>Langkah selanjutnya adalah melakukan pengujian.Pengujian dilakukan dengan cara melakukan runing program. Jika ada masalah yang ditemukan pada fase ini, maka masalah tersebut akan dikirim kembali ke tim developer untuk diselesaikan. </li>
+                    <li>Release <br>Pada tahapan ini,semua peruhan baik desain UI dan pengkodean telah dilakukan pengecekan final sehingga tidak ada kerusakan dan missing proses yang terjadi. </li>
+                    <li>Deploy <br>Setelah production environment dibuat dan dikonfigurasi maka versi terakhir dari pengembangan yang telah dilakukan akan diterapkan</li>
+                    <li>Operate<br>Operasi dalam siklus DevOps berkaitan dengan konfigurasi dan pengelolaan aplikasi perangkat lunak setelah penerapan </li>
+                    <li>Monitor <br> Pada tahap terakhir ini , tim IT operations akan terus bekerja keras untuk memantau infrastruktur , sistem , dan aplikasi.</li>
+                </ol>
+                
 
-                <p style="text-indent: 50px;">Pada perancangan, menggunakan diagram kontek, DFD, ERD, dan perancangan database. Dimana tujuan dari diagram kontek adalah mengetahui keadaan sistem yang akan dibangun. Gambar 1 adalah diagram kontek untuk sistem yang dibuat.</p>
-                <img src="Gambar1.png" style="display:block; margin:auto;" >
+                <h3>3.2	Perancangan Sistem</h3>
+
+                <p style="text-indent: 50px;text-align: justify;">Pada perancangan, menggunakan diagram kontek, DFD, ERD, dan perancangan database. Dimana tujuan dari diagram kontek adalah mengetahui keadaan sistem yang akan dibangun. Gambar 1 adalah diagram kontek untuk sistem yang dibuat.</p>
+                <img src="diagramkonteks.png" style="display:block; margin:auto;width: 100%" >
                 <p style= " text-align: center;"><b> Gambar 1. Diagram kontek</b></p>
-                <p style="text-indent: 50px;">Berdasarkan Gambar 1, maka akan dipecah menjadi data flow diagram (DFD) di Gambar 2. DFD adalah suatu model logika data atau proses yang dibuat lebih mendetail dibanding diagram konteks yang diperbolehkan, bisa dicapai dengan 
+                <p style="text-indent: 50px;text-align: justify;">Berdasarkan Gambar 1, maka akan dipecah menjadi data flow diagram (DFD) di Gambar 2. DFD adalah suatu model logika data atau proses yang dibuat lebih mendetail dibanding diagram konteks yang diperbolehkan, bisa dicapai dengan 
                 mengembangkan diagram. Sisa diagram asli dikembangkan ke dalam gambaran yang lebih 
                 terperinci yang melibatkan tiga sampai Sembilan proses dan menunjukkan penyimpanan data 
                 dan aliran data baru pada level yang lebih rendah. </p>
-                <img src="Gambar2.jpg" style="display:block; margin:auto;" >
+                <img src="diagram jenjang.png" style="display:block; margin:auto;width: 100%" >
                 <p style= " text-align: center;"><b>Gambar 2. DFD level 0</b></p>
-                <p style="text-indent: 50px;">DFD level 0 merupakan pengembangan dari diagram konteks, DFD level 1 merupakan pengembangan dari DFD level 0. Tiap proses dari DFD dapat dikembangkan lagi menjadi lebih detail sampai proses-proses tersebut tidak dapat dikembangkan lagi</p>
-                <img src="Gambar3.jpg" style="display:block; margin:auto;" >
+                <p style="text-indent: 50px;text-align: justify;">DFD level 0 merupakan pengembangan dari diagram konteks, DFD level 1 merupakan pengembangan dari DFD level 0. Tiap proses dari DFD dapat dikembangkan lagi menjadi lebih detail sampai proses-proses tersebut tidak dapat dikembangkan lagi</p>
+                <img src="DAD_1.png" style="display:block; margin:auto;width: 100%" >
                 <p style= " text-align: center;"><b>Gambar 3. DFD level 1 
                 </b></p>
                 <br>
-                <img src="Gambar4.jpg" style="display:block; margin:auto;" >
+                <img src="DAD_lv2.png" style="display:block; margin:auto;width: 100%" >
                 <p style= " text-align: center;"><b>Gambar 4. DFD level 2 
                 </b></p>
                 <br>
-                <img src="Gambar5.jpg" style="display:block; margin:auto;" >
+                <img src="DAD_lv3.png" style="display:block; margin:auto;width: 100%;" >
                 <p style= " text-align: center;"><b>Gambar 4. DFD level 3
                 </b></p>
                 <br>
-                <img src="Gambar6.jpg" style="display:block; margin:auto;" >
-                <p style= " text-align: center;"><b>Gambar 5. DFD level 4 
-                </b></p>
-                <br>
-                <img src="Gambar7.jpg" style="display:block; margin:auto;" >
-                <p style= " text-align: center;"><b>Gambar 6. DFD level 5 
-                </b></p>
+                
 
                
                 
